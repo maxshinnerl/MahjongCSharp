@@ -1,4 +1,7 @@
-﻿namespace Mahjong
+﻿using System.Globalization;
+using System.Runtime.CompilerServices;
+
+namespace Mahjong
 {
     class Program
     {
@@ -18,7 +21,15 @@
                     Console.Write(", ");
                 }
             }
+
             */
+
+            
+            board.VerifyTiles(componentManager);
+
+            Console.WriteLine("\n\n=======\n\n");
+
+            board.Shuffle();
             board.VerifyTiles(componentManager);
         }
     }

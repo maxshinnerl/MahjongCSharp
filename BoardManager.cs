@@ -50,7 +50,6 @@ namespace Mahjong
  
         public void VerifyTiles(ComponentManager cm)
         {
-            // Quickly print out the tiles to make sure board generated correctly
             List<string> tileCodes = [];
             foreach (int num in tileEntities)
             {
@@ -63,6 +62,11 @@ namespace Mahjong
             }
         }
  
+        public void Shuffle()
+        {
+            tileEntities.Shuffle();
+        }
+
     }
 
     // Tile factory for creating tiles with components
