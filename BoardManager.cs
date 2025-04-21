@@ -48,14 +48,17 @@ namespace Mahjong
             }
         }
  
-        public void VerifyTiles(ComponentManager cm)
+        public void VerifyTiles(ComponentManager cm, bool sort = true)
         {
             List<string> tileCodes = [];
             foreach (int num in tileEntities)
             {
                 tileCodes.Add(cm.GetComponent<TileCodeComponent>(num).Code);
             }
-            tileCodes.Sort();
+            if (sort)
+            {
+                tileCodes.Sort();
+            }
             foreach (string code in tileCodes)
             {
                 Console.WriteLine(code);

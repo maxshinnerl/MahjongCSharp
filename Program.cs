@@ -25,12 +25,12 @@ namespace Mahjong
             */
 
             
-            board.VerifyTiles(componentManager);
+            board.VerifyTiles(componentManager, false);
 
             Console.WriteLine("\n\n=======\n\n");
 
             board.Shuffle();
-            board.VerifyTiles(componentManager);
+            board.VerifyTiles(componentManager, false);
         }
     }
 }
